@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+
+<body>	
+  <h1>Welcome to NCM</h1>
+  This is <%= Time.now.strftime('%A') %>
+  <br>
+  Message of the day is <%= `cat /etc/motd` %>
+  <br>
+  <% mylist=`cat /var/log/syslog`.split("\n") %>
+  <% mylist.each do |x| %>
+    <%= x %>
+    <br>
+  <% end %>
+</body>
+</html>
